@@ -7,9 +7,17 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "databrick-project117"
 		},
+		"ls_formula1dl_storage_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_formula1dl_storage'"
+		},
 		"Databricks_project_properties_typeProperties_existingClusterId": {
 			"type": "string",
 			"defaultValue": "1102-114019-pmtvqtzo"
+		},
+		"ls_formula1dl_storage_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://formula1dl117.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -38,8 +46,14 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"ls_formula1dl_storage_accountKey": {
+						"value": "[parameters('ls_formula1dl_storage_accountKey')]"
+					},
 					"Databricks_project_properties_typeProperties_existingClusterId": {
 						"value": "[parameters('Databricks_project_properties_typeProperties_existingClusterId')]"
+					},
+					"ls_formula1dl_storage_properties_typeProperties_url": {
+						"value": "[parameters('ls_formula1dl_storage_properties_typeProperties_url')]"
 					}
 				}
 			},

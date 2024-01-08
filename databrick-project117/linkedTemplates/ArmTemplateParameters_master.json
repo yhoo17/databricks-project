@@ -5,8 +5,14 @@
 		"factoryName": {
 			"value": "databrick-project117"
 		},
+		"ls_formula1dl_storage_accountKey": {
+			"value": ""
+		},
 		"Databricks_project_properties_typeProperties_existingClusterId": {
 			"value": "1102-114019-pmtvqtzo"
+		},
+		"ls_formula1dl_storage_properties_typeProperties_url": {
+			"value": "https://formula1dl117.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"value": ""
