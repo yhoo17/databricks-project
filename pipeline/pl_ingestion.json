@@ -1,0 +1,49 @@
+{
+	"name": "pl_ingestion",
+	"properties": {
+		"description": "Ingest Raw Data",
+		"activities": [
+			{
+				"name": "ingest circuits file",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/formula1/ingestion/1.Ingest_circuits_file",
+					"baseParameters": {
+						"p_data_source": {
+							"value": "@pipeline().parameters.v_date_source",
+							"type": "Expression"
+						},
+						"p_file_date": {
+							"value": "@formatDateTime(pipeline().parameters.p_window_end_date, 'yyyy-MM-dd')",
+							"type": "Expression"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "Databricks_project",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"concurrency": 1,
+		"parameters": {
+			"v_date_source": {
+				"type": "string",
+				"defaultValue": "Ergast"
+			},
+			"p_window_end_date": {
+				"type": "string"
+			}
+		},
+		"annotations": []
+	}
+}
