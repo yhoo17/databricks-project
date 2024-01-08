@@ -1,0 +1,9 @@
+{
+	"name": "databrick-project117",
+	"location": "australiaeast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d03d421f-aa26-4e40-90bd-e95202eedc5f",
+		"tenantId": "1205243a-5cae-4ef0-8a57-630b2d0fdf95"
+	}
+}
